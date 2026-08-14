@@ -10,8 +10,16 @@
 {
   "sections": {
     "main": {
+<<<<<<< HEAD
       "type": "page",
       "settings": {}
+=======
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+>>>>>>> 0d0d22a (Initial Dawn theme setup)
     }
   },
   "order": [

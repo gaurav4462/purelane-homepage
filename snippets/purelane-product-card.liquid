@@ -1,0 +1,57 @@
+{% comment %}Reusable product card. Product data always comes from Shopify.{% endcomment %}
+<article class="glass card rv" data-product-card>
+  <div class="shot">
+    {% if product.tags contains 'Best seller' or product.metafields.custom.badge != blank %}
+      <span class="pill">{{ product.metafields.custom.badge | default: 'Best seller' }}</span>
+    {% endif %}
+
+    <a href="{{ product.url }}" class="pimg-link" aria-label="{{ product.title | escape }}">
+      {% if product.featured_image %}
+        {{ product.featured_image
+          | image_url: width: 700
+          | image_tag:
+            widths: '240,360,480,600,700',
+            sizes: '(min-width: 990px) 25vw, (min-width: 750px) 33vw, 50vw',
+            loading: loading,
+            class: 'product-image'
+        }}
+      {% else %}
+        {{ 'product-1' | placeholder_svg_tag: 'product-image placeholder' }}
+      {% endif %}
+    </a>
+  </div>
+
+  <div class="cbody">
+    <div class="minirow">
+      {% if product.metafields.reviews.rating.value != blank %}
+        <span class="stars">★★★★★</span>
+        <span>{{ product.metafields.reviews.rating.value }}</span>
+      {% else %}
+        <span class="stars">★★★★★</span>
+        <span>4.8</span>
+      {% endif %}
+    </div>
+
+    <h3><a href="{{ product.url }}">{{ product.title }}</a></h3>
+
+    {% if product.description != blank %}
+      <p>{{ product.description | strip_html | truncate: 88 }}</p>
+    {% endif %}
+
+    <div class="prow">
+      <strong>{{ product.price | money }}</strong>
+      {% if product.compare_at_price > product.price %}
+        <s>{{ product.compare_at_price | money }}</s>
+      {% endif %}
+    </div>
+
+    {% if product.available %}
+      {% form 'product', product, class: 'product-card-form' %}
+        <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+        <button type="submit" class="btn btn-ghost add-button">Add to cart</button>
+      {% endform %}
+    {% else %}
+      <button class="btn btn-ghost" type="button" disabled>Sold out</button>
+    {% endif %}
+  </div>
+</article>

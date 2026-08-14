@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1 align="center" style="position: relative;">
   <br>
     <img src="./assets/shoppy-x-ray.svg" alt="logo" width="200">
@@ -158,3 +159,26 @@ Visit our [CONTRIBUTING.md](./CONTRIBUTING.md) for a detailed overview of our pr
 ## License
 
 Skeleton Theme is open-sourced under the [MIT](./LICENSE.md) License.
+=======
+# Purelane — Exact Pixel Reference Mode
+
+This package intentionally preserves the supplied Purelane prototype body, including
+its original custom header, footer, bonus sections, backgrounds, SVG product artwork,
+sticky CTA, animations and final light color override.
+
+It is designed as the visual reference build first. It is NOT the final production
+architecture requested by the assignment (which should split the five required
+sections into independent merchant-editable sections). Use this version to achieve
+pixel accuracy before performing the production split.
+
+Install:
+1. Copy assets/purelane.css and assets/purelane.js into Dawn/assets/
+2. Copy sections/purelane-reference.liquid into Dawn/sections/
+3. Replace templates/index.json with this package's version.
+4. Replace layout/theme.liquid with this package's theme.liquid.
+5. Run `shopify theme check`
+6. Run `shopify theme dev`
+
+This removes Dawn's default header/footer completely because the reference page's
+custom header/footer are already inside the exact reference body.
+>>>>>>> 0d0d22a (Initial Dawn theme setup)

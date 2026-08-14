@@ -7,10 +7,17 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
+<<<<<<< HEAD
  {
   "sections": {
     "main": {
       "type": "404",
+=======
+{
+  "sections": {
+    "main": {
+      "type": "main-404",
+>>>>>>> 0d0d22a (Initial Dawn theme setup)
       "settings": {}
     }
   },

@@ -10,8 +10,19 @@
 {
   "sections": {
     "main": {
+<<<<<<< HEAD
       "type": "collections",
       "settings": {}
+=======
+      "type": "main-list-collections",
+      "settings": {
+        "title": "Collections",
+        "sort": "alphabetical",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "columns_mobile": "2"
+      }
+>>>>>>> 0d0d22a (Initial Dawn theme setup)
     }
   },
   "order": [

@@ -1,0 +1,13 @@
+FIXED AGAIN
+
+The section itself is named "Purelane Reference".
+The preset was also too long in the previous package ("Purelane Reference Homepage"),
+so it has now been shortened to "Purelane Reference".
+
+Expected files:
+sections/purelane-reference.liquid
+templates/index.json -> type: "purelane-reference"
+
+Run:
+shopify theme check
+shopify theme dev

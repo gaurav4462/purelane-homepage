@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * ------------------------------------------------------------
  * IMPORTANT: The contents of this file are auto-generated.
@@ -11,10 +12,22 @@
   "sections": {
     "main": {
       "type": "hello-world",
+=======
+{
+  "sections": {
+    "purelane_reference": {
+      "type": "purelane-reference",
+>>>>>>> 0d0d22a (Initial Dawn theme setup)
       "settings": {}
     }
   },
   "order": [
+<<<<<<< HEAD
     "main"
   ]
 }
+=======
+    "purelane_reference"
+  ]
+}
+>>>>>>> 0d0d22a (Initial Dawn theme setup)
